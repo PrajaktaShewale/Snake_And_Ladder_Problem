@@ -9,7 +9,7 @@ namespace SnakeANDLadder
             while(Flag)
             {
                 Console.WriteLine("Welcome to Snake And Ladder Game");
-                Console.WriteLine("1.start " + "\n" + "2.DieRoll" + "\n" + "3.CheckPosition" + "\n" + "4.Exit");
+                Console.WriteLine("1.start " + "\n" + "2.DieRoll" + "\n" + "3.CheckPosition" + "\n" + "4.Winning Position" + "\n" + "5.Exit");
                 int check = Convert.ToInt32(Console.ReadLine());
                 switch (check)
                 {
@@ -24,6 +24,10 @@ namespace SnakeANDLadder
                     case 3:
                         CheckOption opt = new CheckOption();
                         opt.Check();
+                        break;
+                    case 4:
+                        RepeatTillWinposition win = new RepeatTillWinposition();
+                        win.WinPosition();
                         break;
                         default:
                         Flag = false;
